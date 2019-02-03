@@ -2,6 +2,8 @@ module Idris.REPLOpts
 
 import Idris.Syntax
 
+%default total
+
 public export
 data OutputMode 
   = IDEMode Integer 

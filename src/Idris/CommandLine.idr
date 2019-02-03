@@ -31,6 +31,7 @@ data CLOpt
   | Package PkgCommand String
   | InputFile String
   | IdeMode
+  | IdeModeSocket
   | BlodwenPaths
 
 ActType : List String -> Type
@@ -58,6 +59,9 @@ options = [MkOpt ["--check", "-c"] [] [CheckOnly]
 
            MkOpt ["--ide-mode"] [] [IdeMode]
               (Just "Run the REPL with machine-readable syntax"),
+            
+          MkOpt ["--ide-mode-socket"] [] [IdeModeSocket]
+              (Just "Choose a socket for IDE mode to listen on"),
 
            MkOpt ["--prefix"] [] [ShowPrefix]
               (Just "Show installation prefix"),

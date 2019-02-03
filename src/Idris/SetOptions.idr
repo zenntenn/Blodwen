@@ -12,6 +12,8 @@ import Idris.Syntax
 
 import System
 
+%default covering
+
 -- TODO: Version numbers on dependencies
 export
 addPkgDir : {auto c : Ref Ctxt Defs} ->
